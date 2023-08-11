@@ -2,6 +2,7 @@ package com.hdfk7.module.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,5 +11,14 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI().info(new Info().version("2.0.0").description("接口文档"));
+    }
+
+    @Bean
+    public GroupedOpenApi defaultOpenApi() {
+        return GroupedOpenApi.builder()
+                .group("default")
+                .pathsToMatch("/**")
+                .pathsToExclude("/error")
+                .build();
     }
 }
