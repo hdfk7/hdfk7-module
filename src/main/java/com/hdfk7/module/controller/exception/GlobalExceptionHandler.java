@@ -1,10 +1,10 @@
 package com.hdfk7.module.controller.exception;
 
+import cn.hutool.json.JSONUtil;
 import com.hdfk7.module.aspect.LogAspect;
 import com.hdfk7.proto.base.exception.BaseException;
 import com.hdfk7.proto.base.result.Result;
 import com.hdfk7.proto.base.result.ResultCode;
-import com.hdfk7.proto.base.util.JsonUtil;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -51,7 +51,7 @@ public class GlobalExceptionHandler {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         String httpMethod = attributes == null ? "-" : attributes.getRequest().getMethod();
         String url = attributes == null ? "-" : attributes.getRequest().getRequestURL().toString();
-        log.error(httpMethod + ":" + url + " " + msg + " " + JsonUtil.toJsonStr(errorData), e);
+        log.error(httpMethod + ":" + url + " " + msg + " " + JSONUtil.toJsonStr(errorData), e);
         Result<Object> result = ResultCode.SYS_ERROR.bindResult(errorData).bindMsg(msg).bindCode(code);
         logAspect.finishTask(result);
         return result;
