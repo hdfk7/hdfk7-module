@@ -7,8 +7,10 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+@Order(0)
 @Aspect
 @Component
 public class LogAspect extends com.hdfk7.boot.starter.common.aspect.LogAspect {
