@@ -32,13 +32,16 @@ public class GlobalExceptionHandler {
         int code = ResultCode.SYS_ERROR.getCode();
         Object errorData = null;
         if (e instanceof BindException) {
-            StringBuffer errorMsg = new StringBuffer();
+            StringBuilder errorMsg = new StringBuilder();
             List<FieldError> errors;
             errors = ((BindException) e).getBindingResult().getFieldErrors();
             if (e instanceof MethodArgumentNotValidException) {
                 errors = ((MethodArgumentNotValidException) e).getBindingResult().getFieldErrors();
             }
-            errors.forEach(error -> errorMsg.append(error.getField()).append(" ").append(error.getDefaultMessage()).append(";"));
+            for (int i = 0; i < errors.size(); i++) {
+                FieldError error = errors.get(i);
+                errorMsg.append("[").append(error.getField()).append("]").append(error.getDefaultMessage()).append(i == errors.size() - 1 ? "" : ",");
+            }
             msg = errorMsg.toString();
         }
         if (e instanceof ConstraintViolationException
@@ -52,9 +55,9 @@ public class GlobalExceptionHandler {
             errorData = ((BaseException) e).errorData;
         }
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        String httpMethod = attributes == null ? "-" : attributes.getRequest().getMethod();
+        String method = attributes == null ? "-" : attributes.getRequest().getMethod();
         String url = attributes == null ? "-" : attributes.getRequest().getRequestURL().toString();
-        log.error(httpMethod + ":" + url + " " + msg + " " + JSONUtil.toJsonStr(errorData), e);
+        log.error("{}|{}|{}|{}", method, url, msg, JSONUtil.toJsonStr(errorData), e);
         Result<Object> result = ResultCode.SYS_ERROR.bindResult(errorData).bindMsg(msg).bindCode(code);
         logAspect.finishTask(result);
         return result;
