@@ -1,10 +1,10 @@
-package com.hdfk7.module.controller.exception;
+package cn.hdfk7.app.module.controller.exception;
 
+import cn.hdfk7.app.module.aspect.LogAspect;
 import cn.hutool.json.JSONUtil;
-import com.hdfk7.module.aspect.LogAspect;
-import com.hdfk7.proto.base.exception.BaseException;
-import com.hdfk7.proto.base.result.Result;
-import com.hdfk7.proto.base.result.ResultCode;
+import cn.hdfk7.boot.proto.base.exception.BaseException;
+import cn.hdfk7.boot.proto.base.result.Result;
+import cn.hdfk7.boot.proto.base.result.ResultCode;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

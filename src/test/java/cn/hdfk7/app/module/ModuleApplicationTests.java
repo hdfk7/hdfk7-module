@@ -1,4 +1,4 @@
-package com.hdfk7.module;
+package cn.hdfk7.app.module;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

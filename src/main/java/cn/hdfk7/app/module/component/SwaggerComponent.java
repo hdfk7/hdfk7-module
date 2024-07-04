@@ -1,4 +1,4 @@
-package com.hdfk7.module.component;
+package cn.hdfk7.app.module.component;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

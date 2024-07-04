@@ -3,30 +3,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.hdfk7.boot</groupId>
+        <groupId>cn.hdfk7.boot</groupId>
         <artifactId>hdfk7-boot-starter-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.7-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
+    <groupId>cn.hdfk7.app</groupId>
     <artifactId>hdfk7-module</artifactId>
     <version>1.0.0</version>
     <name>hdfk7-module</name>
 
     <properties>
-        <hdfk7-boot-starter-common.version>1.0.0-SNAPSHOT</hdfk7-boot-starter-common.version>
-        <hdfk7-boot-starter-discovery.version>1.0.0-SNAPSHOT</hdfk7-boot-starter-discovery.version>
-        <hdfk7-code-generator.version>1.0.0-RELEASE</hdfk7-code-generator.version>
+        <hdfk7-boot-starter-common.version>1.0.7-SNAPSHOT</hdfk7-boot-starter-common.version>
+        <hdfk7-boot-starter-discovery.version>1.0.5-SNAPSHOT</hdfk7-boot-starter-discovery.version>
+        <hdfk7-code-generator.version>1.0.6-SNAPSHOT</hdfk7-code-generator.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.hdfk7.boot</groupId>
+            <groupId>cn.hdfk7.boot</groupId>
             <artifactId>hdfk7-boot-starter-common</artifactId>
             <version>${hdfk7-boot-starter-common.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.hdfk7.boot</groupId>
+            <groupId>cn.hdfk7.boot</groupId>
             <artifactId>hdfk7-boot-starter-discovery</artifactId>
             <version>${hdfk7-boot-starter-discovery.version}</version>
         </dependency>
@@ -96,7 +97,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hdfk7.boot</groupId>
+            <groupId>cn.hdfk7.boot</groupId>
             <artifactId>hdfk7-code-generator</artifactId>
             <version>${hdfk7-code-generator.version}</version>
             <scope>test</scope>

@@ -1,4 +1,4 @@
-package com.hdfk7.module;
+package cn.hdfk7.app.module;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -42,7 +42,7 @@ public class CodeGenerator {
         // 4、包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(null);
-        pc.setParent("com.hdfk7.module");
+        pc.setParent("cn.hdfk7.app.module");
         pc.setController("controller");
         pc.setEntity("domain.entity");
         pc.setService("infrastructure");
