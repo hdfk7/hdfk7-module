@@ -15,9 +15,9 @@
     <name>hdfk7-module</name>
 
     <properties>
-        <hdfk7-boot-starter-common.version>1.0.8-SNAPSHOT</hdfk7-boot-starter-common.version>
-        <hdfk7-boot-starter-discovery.version>1.0.5-SNAPSHOT</hdfk7-boot-starter-discovery.version>
-        <hdfk7-code-generator.version>1.0.6-SNAPSHOT</hdfk7-code-generator.version>
+        <hdfk7-boot-starter-common.version>1.0.9-SNAPSHOT</hdfk7-boot-starter-common.version>
+        <hdfk7-boot-starter-discovery.version>1.0.8-SNAPSHOT</hdfk7-boot-starter-discovery.version>
+        <hdfk7-code-generator.version>1.0.7-SNAPSHOT</hdfk7-code-generator.version>
     </properties>
 
     <dependencies>
