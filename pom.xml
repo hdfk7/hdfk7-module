@@ -5,19 +5,19 @@
     <parent>
         <groupId>cn.hdfk7.boot</groupId>
         <artifactId>hdfk7-boot-starter-parent</artifactId>
-        <version>1.0.16-SNAPSHOT</version>
+        <version>1.1.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
     <groupId>cn.hdfk7.app</groupId>
     <artifactId>hdfk7-module</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>hdfk7-module</name>
 
     <properties>
-        <hdfk7-boot-starter-common.version>1.0.12-SNAPSHOT</hdfk7-boot-starter-common.version>
-        <hdfk7-boot-starter-discovery.version>1.0.9-SNAPSHOT</hdfk7-boot-starter-discovery.version>
-        <hdfk7-code-generator.version>2.0.8-SNAPSHOT</hdfk7-code-generator.version>
+        <hdfk7-boot-starter-common.version>1.1.0-SNAPSHOT</hdfk7-boot-starter-common.version>
+        <hdfk7-boot-starter-discovery.version>1.1.0-SNAPSHOT</hdfk7-boot-starter-discovery.version>
+        <hdfk7-code-generator.version>2.1.0-SNAPSHOT</hdfk7-code-generator.version>
     </properties>
 
     <dependencies>
